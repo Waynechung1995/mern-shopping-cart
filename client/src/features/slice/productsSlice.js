@@ -9,14 +9,14 @@ const initialState = {
 
 export const productFetch = createAsyncThunk("products/producstFetch",
     async () => {
-        const data = await axios.get("/api/products");
+        const data = await axios.get("https://mern-shopping-cart-lx1s.onrender.com/api/products");
         return data.data
     }
 ) 
 
 export const productDetailFetch = createAsyncThunk("products/productDetailFetch",
     async (id) => {
-        const data = await axios.get(`/api/products/${id}`);
+        const data = await axios.get(`https://mern-shopping-cart-lx1s.onrender.com/api/products/${id}`);
         return data.data
     }
 ) 
