@@ -4,7 +4,9 @@ const { getAllProducts, getProductById } = require("../controller/productControl
 
 //@desc GET all product from DB
 //@route GET /api/products
-router.get("/", getAllProducts);
+router.get("/", getAllProducts, (req, res) => {
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+});
 
 //@desc GET a product by id from DB
 //@route GET /api/products/:id
